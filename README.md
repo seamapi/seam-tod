@@ -27,7 +27,7 @@ representations, but it has not yet been adopted. [The proposed revision](https:
 motivates the syntax of `seam-tod`
 
 `seam-tod` is timezone-aware. Handling time-zone unaware times complicates
-syntax and is generally very important when dealing with time of day strings.
+syntax and timezones are generally very important when dealing with time of day strings.
 
 ## Format
 
