@@ -44,12 +44,6 @@ The following are NOT valid `seam-tod` strings:
 - `09:00:00Z[America/Los_Angeles]` (redundant time offset)
 - `09:00:00-08:00[America/Los_Angeles]` (redundant time offset)
 
-Note that the following examples ARE equivalent:
-
-- `09:00:00-08:00[America/Los_Angeles]`
-- `01:00:00Z[America/Los_Angeles]`
-- `09:00:00[America/Los_Angeles]`
-
 ## Generous Acceptance
 
 ### Examples
