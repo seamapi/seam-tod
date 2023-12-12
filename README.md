@@ -72,3 +72,19 @@ The following CANNOT be converted to `seam-tod` strings:
 
 - IANA Timezones (America/Los_Angeles)
 - NIST Timezones (EST, EDT, UTC)
+
+## Strict Seam TOD Output
+
+A Strict Seam TOD Output is a strict output that should be emitted by APIs. There
+is exactly one Strict Seam TOD Output representation of a timezone time pair. The
+rules for constructing a Strict Seam TOD Output are as follows:
+
+- Start with `HH:MM:SS.mmm[TIMEZONE]`
+  - `HH` - hours with `0` left pad such that it is exactly two characters
+  - `MM` - minutes with `0` left pad such that it is exactly two characters
+  - `SS` - seconds with `0` left pad such that it is exactly two characters
+  - `mmm` - milliseconds with `0` left pad such that it is exactly three characters
+  - `TIMEZONE` - the relevant IANA timezone
+- If representing an offset, compute the offset by adjusting for a new `HH`, `MM`, `SS` and `mmm` and set the `TIMEZONE` to `UTC`
+- If `mmm` is `000` and `SS` is `00`, remove `SS.mmm`
+- If `SS` is NOT `00` and `mmm` is `000`, remove `.mmm`
