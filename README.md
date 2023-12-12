@@ -85,6 +85,6 @@ rules for constructing a Strict Seam TOD Output are as follows:
   - `SS` - seconds with `0` left pad such that it is exactly two characters
   - `mmm` - milliseconds with `0` left pad such that it is exactly three characters
   - `TIMEZONE` - the relevant IANA timezone
-- If representing an offset, compute the offset by adjusting for a new `HH`, `MM`, `SS` and `mmm` and set the `TIMEZONE` to `UTC`
+- If representing an offset (not a timezone), compute the offset by adjusting for a new `HH`, `MM`, `SS` and `mmm` and set the `TIMEZONE` to `UTC`
 - If `mmm` is `000` and `SS` is `00`, remove `SS.mmm`
 - If `SS` is NOT `00` and `mmm` is `000`, remove `.mmm`
