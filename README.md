@@ -88,3 +88,11 @@ rules for constructing a Strict Seam TOD Output are as follows:
 - If representing an offset (not a timezone), compute the offset by adjusting for a new `HH`, `MM`, `SS` and `mmm` and set the `TIMEZONE` to `UTC`
 - If `mmm` is `000` and `SS` is `00`, remove `SS.mmm`
 - If `SS` is NOT `00` and `mmm` is `000`, remove `.mmm`
+
+
+### Examples
+
+- `01:23:12.543[PST]` - 1:23am plus 12.543 seconds Pacific Standard Timezone
+- `01:23:12[PST]` - 1:23am plus 12 seconds Pacific Standard Timezone
+- `01:23[PST]` - 1:23am Pacific Standard Timezone
+- `01:00[PST]` - 1am Pacific Standard Timezone
